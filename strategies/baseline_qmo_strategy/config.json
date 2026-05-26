@@ -1,0 +1,53 @@
+{
+  "strategy": {
+    "name": "Baseline_QMO_Strategy",
+    "symbol": "BTCUSDT",
+    "timeframe_main": "M5",
+    "timeframe_entry": "M1",
+    "reference_time": "19:40",
+    "trade_mode": "LIVE"
+  },
+
+  "risk_management": {
+    "risk_reward_ratio": 1.0,
+    "lot_size": 0.1,
+    "max_trades_at_a_time": 1,
+    "buffer_points": 10
+  },
+
+  "baseline_settings": {
+    "baseline_period": 26
+  },
+
+  "qmo_settings": {
+    "short_ema": 20,
+    "long_ema": 55,
+    "regression_length": 20,
+    "smoothing_ema": 10,
+    "trend_window": 50
+  },
+
+  "entry_conditions": {
+    "require_baseline_touch_after_trade": true,
+    "require_qmo_confirmation": true,
+    "require_breakout_confirmation": true,
+    "strict_baseline_position": true
+  },
+
+  "swing_settings": {
+    "lookback_candles": 15,
+    "left_right_confirmation": 2
+  },
+
+  "execution": {
+    "order_filling": "IOC",
+    "deviation": 20,
+    "magic_number": 100
+  },
+
+  "logging": {
+    "enable_console_logs": true,
+    "show_qmo_values": true,
+    "show_trade_updates": true
+  }
+}
